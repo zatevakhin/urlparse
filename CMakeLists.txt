@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.8)
+project(url)
+
+set(CMAKE_C_STANDARD 99)
+
+FILE(GLOB HEADER_FILES RELATIVE
+        "${CMAKE_CURRENT_SOURCE_DIR}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/*.h"
+        )
+
+FILE(GLOB SOURCE_FILES RELATIVE
+        "${CMAKE_CURRENT_SOURCE_DIR}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
+        )
+
+add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
